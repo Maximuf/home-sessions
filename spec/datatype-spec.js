@@ -43,6 +43,10 @@ describe("Data types tests ", function() {
       expect(check.dataTypes(100)).toBe('equal to 100');
     });
 
+    it("should return 'more than 100' for 1000", function() {
+      expect(check.dataTypes(1000)).toBe('more than 100');
+    });
+
 
   });
 
@@ -74,6 +78,10 @@ describe("Data types tests ", function() {
     it("should return `undefined` for `[4, 9]`", function() {
       expect(check.dataTypes([4, 9])).not.toBeDefined();
     });
+
+    it("should return `undefined` for `[0]`", function() {
+      expect(check.dataTypes([0])).not.toBeDefined();
+    })
   });
 
   describe("Case for functions", function() {
