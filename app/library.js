@@ -11,4 +11,12 @@ const dataTypes = function(data) {
 		return output;
 	}
 	//Check if input data is a function
+	else if(typeof(data) === "function") {
+		return data(true);
+	}
+	//Check if input is an Array
+	else if(Array.isArray(data)) {
+		const output = data[2];
+		return output;
+	}
 };
