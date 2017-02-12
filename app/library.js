@@ -1,13 +1,14 @@
 'use strict'
 const dataTypes = function(data) {
-	//Checking if data is a string!
+	//Check if input data is a string!
 	if(typeof(data) === "string") {
 		const output = data.length;
 		return output;
 	} 
-	//Checking if data is a number
+	//Check if input data is a boolean
 	else if(typeof(data) === "boolean") {
 		const output = "boolean";
 		return output;
 	}
+	//Check if input data is a function
 };
