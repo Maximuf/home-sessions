@@ -94,5 +94,17 @@ describe("Data types tests ", function() {
       };
       expect(check.dataTypes(callback)).toBe('called callback');
     });
+
+    it("should call the `helloworld` function with argument true, and return `hello world`", function() {
+      var helloworld = function(arg) {
+        expect(arg).toBeTruthy();
+        if(arg === true) {
+          return 'hello world';
+        }
+      };
+      expect(check.dataTypes(helloworld)).toBe('hello world')
+    });
+
+    
   });
 });
